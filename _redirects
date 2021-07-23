@@ -1,3 +1,2 @@
 /api/*  http://4a9465ef8477.ngrok.io:splat  200
-/downloadapi/bhadoo/cloud/proxy/music/downloads/*  https://sgdccdnems01.cdnsrv.jio.com/:splat  200
-https://jiosaavn.netlify.app/* https://bhadoomusic.com/:splat  301!
+/downloadapi/bhadoo/cloud/proxy/music/downloads/*  https://sgdccdnems01.cdnsrv.jio.com/:splat  200!
