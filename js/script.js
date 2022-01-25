@@ -26,7 +26,7 @@ window.onload = async() => {
 			let txt = ''
 			txt += `<table class='table table-striped table-bordered'><br><div class="alert alert-danger" role="alert">Results for : ${param}</div><thead><tr><th scope='col'>Name</th><th scope='col'>Album</th></tr></thead><tbody>`
 			get_data.forEach(song => {
-				txt += `<tr><td><a href='/?song=${song.url}'>${song.title} By ${song.more_info.primary_artists}</a></td><td><a href='/album/?id=${song.more_info.album_id}'>${song.album}</a></td></tr>`
+				txt += `<tr><td><a href='/song/?query=${song.url}'>${song.title} By ${song.more_info.primary_artists}</a></td><td><a href='/album/?id=${song.more_info.album_id}'>${song.album}</a></td></tr>`
 			});
 			txt += "</tbody></table>"
 			document.getElementById("input").innerHTML = `<br><div class='input-group input-group-lg'> <span class='input-group-text' id='inputGroup-sizing-default'>Song Name</span><input id='srcid' type='text' class='form-control' placeholder='Enter Song Name or JioSaavn Link' name='song' onfocus='this.value=""' value='' autocomplete='off' required aria-describedby='addon-wrapping'><input type='submit' class='btn btn-light' value='Search'></div>`
@@ -43,17 +43,17 @@ function renderHome() {
 	document.getElementById("status").innerHTML = "<p id='hourly'></p>";
 	var hour = new Date().getHours();
 	if(hour == "1" || hour == "6" || hour == "12" || hour == "18" || hour == "24") {
-		document.getElementById("hourly").innerHTML = "<a href='/?song=https://www.jiosaavn.com/song/meri-aashiqui/RV4pdS5obh4'><img src='images/banner.mp4' width='250px' height='250px'>";
+		document.getElementById("hourly").innerHTML = "<a href='/song/?query=https://www.jiosaavn.com/song/meri-aashiqui/RV4pdS5obh4'><img src='images/banner.mp4' width='250px' height='250px'>";
 	} else if(hour == "2" || hour == "7" || hour == "13" || hour == "19") {
-		document.getElementById("hourly").innerHTML = "<a href='/?song=https://www.jiosaavn.com/song/wanga-kaaliyan/OzIYCARjQGA'><img src='images/banner.mp4' width='250px' height='250px'>";
+		document.getElementById("hourly").innerHTML = "<a href='/song/?query=https://www.jiosaavn.com/song/wanga-kaaliyan/OzIYCARjQGA'><img src='images/banner.mp4' width='250px' height='250px'>";
 	} else if(hour == "3" || hour == "8" || hour == "14" || hour == "20") {
-		document.getElementById("hourly").innerHTML = "<a href='/?song=https://www.jiosaavn.com/song/koi-fariyaad-unplugged/FjpSXDVUdnE'><img src='images/banner.mp4' width='250px' height='250px'>";
+		document.getElementById("hourly").innerHTML = "<a href='/song/?query=https://www.jiosaavn.com/song/koi-fariyaad-unplugged/FjpSXDVUdnE'><img src='images/banner.mp4' width='250px' height='250px'>";
 	} else if(hour == "4" || hour == "9" || hour == "15" || hour == "21") {
-		document.getElementById("hourly").innerHTML = "<a href='/?song=https://www.jiosaavn.com/song/tu-hi-yaar-mera-from-pati-patni-aur-woh/JV8HCDpVRHs'><img src='images/banner.mp4' width='250px' height='250px'>";
+		document.getElementById("hourly").innerHTML = "<a href='/song/?query=https://www.jiosaavn.com/song/tu-hi-yaar-mera-from-pati-patni-aur-woh/JV8HCDpVRHs'><img src='images/banner.mp4' width='250px' height='250px'>";
 	} else if(hour == "5" || hour == "10" || hour == "16" || hour == "22") {
-		document.getElementById("hourly").innerHTML = "<a href='/?song=https://www.jiosaavn.com/song/senorita/I1sPdgJoZFE'><img src='images/banner.mp4' width='250px' height='250px'>";
+		document.getElementById("hourly").innerHTML = "<a href='/song/?query=https://www.jiosaavn.com/song/senorita/I1sPdgJoZFE'><img src='images/banner.mp4' width='250px' height='250px'>";
 	} else {
-		document.getElementById("hourly").innerHTML = "<a href='/?song=https://www.jiosaavn.com/song/love-me-like-you-do-from-fifty-shades-of-grey/AiskdBdfR1w'><img src='images/banner.mp4' width='250px' height='250px'>";
+		document.getElementById("hourly").innerHTML = "<a href='/song/?query=https://www.jiosaavn.com/song/love-me-like-you-do-from-fifty-shades-of-grey/AiskdBdfR1w'><img src='images/banner.mp4' width='250px' height='250px'>";
 	}
 }
 
